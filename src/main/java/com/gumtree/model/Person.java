@@ -1,7 +1,11 @@
 package com.gumtree.model;
 
 import java.util.Date;
-
+/**
+ * A Person object to hold the details from the sample file
+ * @author D J Baptiste
+ *
+ */
 public class Person {
 	
 	private String name;

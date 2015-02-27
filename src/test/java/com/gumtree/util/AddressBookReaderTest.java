@@ -51,4 +51,20 @@ public class AddressBookReaderTest {
     	
     }
     
+    @Test
+    public void shouldReturnDaysBetweenBillAndPaul() throws ParseException {
+    	// Given we have a book reader
+    	addressBookReader.readAddressBook("AddressBook.txt"); 
+    	
+    	// When we ask for the difference between the two put the youngest person first
+    	// We could write a further test to make sure the names are entered that way around
+    	// but just assume they are always entered in the correct order
+    	int ageDifference = addressBookReader.getAgeDifference("Paul", "Bill");
+    	
+    	// Then
+    	assertThat(ageDifference, is(2862));
+    	
+    }
+    
+    
 }
